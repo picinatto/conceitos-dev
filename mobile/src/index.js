@@ -18,6 +18,10 @@ export default function App() {
       title: `Novo projeto ${Date.now()}`,
       owner: 'Ricardo Picinatto'
     });
+
+    const project = response.data;
+
+    setProjects([...projects, project]);
   }
 
   return(
@@ -51,7 +55,7 @@ const styles = StyleSheet.create({
 
   project: {
     color: '#FFF',
-    fontSize: 30
+    fontSize: 20
   },
 
   button: {
