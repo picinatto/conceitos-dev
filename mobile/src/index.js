@@ -17,7 +17,9 @@ export default function App() {
     <>
       <StatusBar barStyle="ligh-content" backgroundColor='#7159c1'/>
       <View style={styles.container}>
-        <Text style={styles.title}>Hello GoStack</Text>
+        {projects.map(project => (
+          <Text style={styles.project} key={project.id}>{project.title}</Text>
+        ))}
       </View>
     </>
   );
@@ -30,9 +32,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center'
   },
-  title: {
+
+  project: {
     color: '#FFF',
-    fontSize: 32,
-    fontWeight: 'bold'
+    fontSize: 20
   },
 });
